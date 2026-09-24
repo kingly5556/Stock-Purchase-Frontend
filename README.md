@@ -8,7 +8,7 @@ React + TypeScript + Vite SPA for inventory and purchase-order management. It is
 | `Stock-Purchase-Backend` | REST API + serves this SPA's build |
 | `Stock-Purchase-Frontend` | this repo |
 
-Clone all three as sibling folders (e.g. under `K-ERP/`).
+Keep `Stock-Purchase-Backend` and `Stock-Purchase-Frontend` as sibling folders (e.g. together under `K-ERP/Stock and purchase/`); `K-ERPHub` can live anywhere, it only talks to the backend over HTTP.
 
 ## Local development
 
