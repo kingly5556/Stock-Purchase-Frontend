@@ -220,3 +220,53 @@ button:disabled {
   color: var(--danger);
   font-weight: 600;
 }
+
+/* Phones / narrow windows: sidebar becomes a top bar with a scrollable menu,
+   and wide tables scroll sideways instead of squeezing their columns. */
+@media (max-width: 760px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 12px 8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .sidebar h1 {
+    margin: 0 4px 8px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .main {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  input,
+  select {
+    min-width: 0;
+  }
+}
